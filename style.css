@@ -1,0 +1,50 @@
+body{
+    background-color: #666;
+    color: #8b8;
+    font-family: Arial, sans-serif;
+}
+#board{
+    display: grid;
+   ;
+    width: 400px;
+    height: 400px;
+   
+    grid-gap: 10px;
+}
+.cell{
+    width: 10px;
+    height: 10px;
+    border: 1px solid #444;
+       
+    background-color: white ;  
+    
+    
+}
+.alive{
+    background-color: #8b8;
+}
+button{
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 150%;
+    background-color: lightblue;
+    border: 1px outset darkgrey;
+}
+#controls{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+#alivepercent{
+    margin: 0.5em;
+    font-size: 100%;
+    color: black;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+}
+#frame{
+    position:fixed;
+    left: 200px;
+    
+}
