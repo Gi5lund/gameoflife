@@ -45,7 +45,7 @@ export class GameOfLifeController {
         // Add event listener for a "reset" button to reset the grid to its initial state
         const resetButton = document.getElementById('reset-button');
         resetButton.addEventListener('click', () => {
-            this.model.createGrid();
+            this.model.resetGrid();
             this.view.updateView();
         });
         // Add event listener for a "random seed" button to randomly populate the grid

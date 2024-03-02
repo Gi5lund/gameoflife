@@ -1,33 +1,5 @@
 
-// // Function to generate HTML for a single cell
-// function generateCell(row, col) {
-//     return `<div class="cell" data-row="${row}" data-col="${col}"></div>`;
-// }
 
-// // Function to generate HTML for a row of cells
-// function generateRow(row, width) {
-//     let cellsHTML = '';
-//     for (let col = 0; col < width; col++) {
-//         cellsHTML += generateCell(row, col);
-//     }
-//     return `<div class="row">${cellsHTML}</div>`;
-// }
-
-// // Function to generate HTML for the entire board
-// function generateBoard(height, width) {
-//     let rowsHTML = '';
-//     for (let row = 0; row < height; row++) {
-//         rowsHTML += generateRow(row, width);
-//     }
-//     return rowsHTML;
-// }
-
-// // Call the function to generate the board and insert it into the "board" element
-// const boardElement = document.getElementById('board');
-// const height = 6; // Example height
-// const width = 7; // Example width
-// boardElement.innerHTML = generateBoard(height, width);
-import{GameOfLifeModel} from "../model/model.js";
 export class GameOfLifeView {
     constructor(model) {
         this.model = model;
@@ -72,6 +44,8 @@ export class GameOfLifeView {
                 cell.classList.remove('alive');
             }
         });
+        const generations=document.querySelector("#generations");
+        generations.value=`Generations: ${this.model.generations}`;
     }
     makeBoardClickable(){
         this.boardElement.addEventListener("click", this.boardClicked.bind(this));

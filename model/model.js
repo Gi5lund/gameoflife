@@ -3,6 +3,7 @@ export class GameOfLifeModel {
         this.width = width;
         this.height = height;
         this.grid = this.createGrid();
+        this.generations=0;
     }
 
     createGrid() {
@@ -53,6 +54,7 @@ export class GameOfLifeModel {
             }
         }
         this.grid = newGrid;
+        this.generations++;
     }
 
     // Method to count the number of live neighbors for a given cell
@@ -84,5 +86,9 @@ export class GameOfLifeModel {
                 this.grid[row][col] = Math.random() >(1-alivepercent);
             }
         }
+    }
+    resetGrid(){
+        this.grid = this.createGrid();
+        this.generations=0;
     }
 }

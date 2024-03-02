@@ -35,13 +35,14 @@ button{
     justify-content: flex-start;
     
 }
-#alivepercent{
+input{
     margin: 0.5em;
     font-size: 100%;
     color: black;
     width: 200px;
     height: 40px;
     background-color: white;
+    border: 4px inset darkgrey;
 }
 #frame{
     position:fixed;
